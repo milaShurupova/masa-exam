@@ -32,7 +32,7 @@ router.use((req, res, next) => {
 
 /** Routes */
 router.use('/demo/', demoRoutes.router);
-router.use('/', schoolRoutes.router);
+router.use('/general/', schoolRoutes.router);
 router.use('/auth/', authenticationRoutes.router);
 router.use('/user/', userRoutes.router);
 

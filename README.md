@@ -68,14 +68,25 @@
 **Section B: Please, explain the following terms the best way you can**
 
 11. Authentication & Authorization
+In order to maintain security we use Authentication and Authorization
+First step is Authentication: by it we verify the indentity (kinda enter the house)
+Second step is Authorization: by it we are checking, does the user have permission to resoures (like after entering the house we are checking, can this user go to bathroom, or to bedroom, ect)
 
 12. Stored procedure
+There are two ways to interact with database - by query or by stored procedure
+When we use query, we keep as a constand the whole query itself, insert paramerteres iside the fucntion and send it to database - so by using query we have more "power" as a developer to modify query, ect
+When we use stored procedure, we keen as constand only the name of stored procedure, and the content of it (some combination of queries) is kept in the database and usualy was written by person who works with database (not developer). So as a developer, we send to database the name of stores procedure and params, and database insert this params to stored procedure by itself.
 
 13. Git rebase
+Git rebase is a way to combine two branches. 
+There are two ways to do it: rebase and merge.
+We prefer to use rebase, because it kinda rewrite the history in a way we want and keep "1 line" of commits.
 
 14. Generics
+This is type, which allows us to create for example functions who can work with similar types, but not one type. In this case during creating of the fuction we use generics, and during calling the fuction we mention which type exactly will be applied.
 
 15. Middleware
+This is a place (part of architecture), where we proceed some actions (usually Authentication & Authorization) before the actual request was started to execute. In our code, from routes we go to middlewhewre before we go to controllers, which allows us to check does user have a token itself and permission to proceed request that he sent, before we start to execute the request itself
 
  
 **Part II: Practice on paper**

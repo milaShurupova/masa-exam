@@ -136,4 +136,16 @@ let result: number;
 const array: number[] = [1, 2, 3, 4, 5];
 result = array.reduce((a, b) => a + b, 0);
 
+19. Explain the following piece of code: => 5 points
 
+public static padLeft(input: number, places: number): string {
+	const zeroes: number = places - input.toString().length + 1;
+	return Array(+(zeroes > 0 && zeroes)).join("0") + input.toString();
+}
+
+This method expects 2 numbers;
+First number (input) is converted to string;
+Second number (places) it theats as a place on which first number (input) will be placed, and
+all the places before it will be filled with zeros (0).
+
+For example, if we call padLeft(3, 4), method will return 0003

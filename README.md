@@ -92,7 +92,9 @@ This is a place (part of architecture), where we proceed some actions (usually A
 **Part II: Practice on paper**
 *No restrictions on online resources usage*
 
-16. You received a bug stating the following: "Intermittently the following method results in a system getting stuck." You're required to find and fix the problem in this method:
+16. You received a bug stating the following: 
+"Intermittently the following method results in a system getting stuck." 
+You're required to find and fix the problem in this method:
 
 		public  static  addMonths(date: Date, value: number): Date {
 		    let expectedMonth: number = date.getMonth() + value;
@@ -105,6 +107,11 @@ This is a place (part of architecture), where we proceed some actions (usually A
 	        }
     
 		    date.setMonth(date.getMonth() + value);
+
+			if (date.getMonth() == expectedMonth) {
+            	return date;
+        	}
+
 	        const daysToAdd: number = date.getMonth() >  expectedMonth ? -1 : 1;
 	        while (date.getMonth() !== expectedMonth) {
 		        date.setDate(date.getDate() + daysToAdd);

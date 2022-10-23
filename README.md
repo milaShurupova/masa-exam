@@ -122,3 +122,10 @@ You're required to find and fix the problem in this method:
 
 17. Having the following DB tables diagram:
 ![](https://github.com/lentyaishe/masa-exam/blob/dev/resources/db-relations.jpg)
+
+SELECT CONCAT(student.first_name, student.last_name) as Student, CONCAT(parent.first_name, parent.last_name, parent.phone) as Parent
+FROM parent_to_student
+INNER JOIN student ON parent_to_student.student_id = student.id
+INNER JOIN parent ON parent_to_student.parent_id = parent.id
+
+//I know it works not how it should be but it best I could do and I moved on for next task)

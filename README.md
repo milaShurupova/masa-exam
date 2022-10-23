@@ -129,3 +129,11 @@ INNER JOIN student ON parent_to_student.student_id = student.id
 INNER JOIN parent ON parent_to_student.parent_id = parent.id
 
 //I know it works not how it should be but it best I could do and I moved on for next task)
+
+18. Write a method in JS/TS that gets as an argument an array of numbers and returns the sum of all array members. => 5 points
+
+let result: number;
+const array: number[] = [1, 2, 3, 4, 5];
+result = array.reduce((a, b) => a + b, 0);
+
+
